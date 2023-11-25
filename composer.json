@@ -1,0 +1,12 @@
+{
+    "name": "openmage-strict/module-weee",
+    "description": "Mage_Weee",
+    "license": "OSL-3.0",
+    "type": "magento-module",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*",
+        "openmage-strict/module-catalog": "*",
+        "openmage-strict/module-sales": "*",
+        "openmage-strict/module-tax": "*"
+    }
+}
