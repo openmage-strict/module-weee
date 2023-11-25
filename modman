@@ -1,5 +1,4 @@
 src/app/code/core/Mage/Weee/                                     app/code/core/Mage/Weee/
-src/app/design/adminhtml/default/default/layout/weee.xml         app/design/adminhtml/default/default/layout/weee.xml
 src/app/design/adminhtml/default/default/template/weee/          app/design/adminhtml/default/default/template/weee/
 src/app/design/frontend/base/default/layout/weee.xml             app/design/frontend/base/default/layout/weee.xml
 src/app/etc/modules/Mage_Weee.xml                                app/etc/modules/Mage_Weee.xml
