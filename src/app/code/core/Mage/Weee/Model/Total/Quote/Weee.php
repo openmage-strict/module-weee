@@ -110,6 +110,8 @@ class Mage_Weee_Model_Total_Quote_Weee extends Mage_Tax_Model_Sales_Total_Quote_
      * @param   Mage_Sales_Model_Quote_Address $address
      * @param   Mage_Sales_Model_Quote_Item_Abstract $item
      * @return  $this
+     *
+     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
      */
     protected function _process(Mage_Sales_Model_Quote_Address $address, $item)
     {
@@ -126,11 +128,6 @@ class Mage_Weee_Model_Total_Quote_Weee extends Mage_Tax_Model_Sales_Total_Quote_
 
         $applied = [];
         $productTaxes = [];
-
-        $totalValue = 0;
-        $baseTotalValue = 0;
-        $totalRowValue = 0;
-        $baseTotalRowValue = 0;
 
         $totalExclTaxValue = 0;
         $baseTotalExclTaxValue = 0;
@@ -159,12 +156,6 @@ class Mage_Weee_Model_Total_Quote_Weee extends Mage_Tax_Model_Sales_Total_Quote_
             $baseRowValueExclTax = $baseValueExclTax * $item->getTotalQty();
 
             $title = $attribute->getName();
-
-            //Calculate the Wee value
-            $totalValue += $value;
-            $baseTotalValue += $baseValue;
-            $totalRowValue += $rowValue;
-            $baseTotalRowValue += $baseRowValue;
 
             //Calculate the Wee without tax
             $totalExclTaxValue += $valueExclTax;
@@ -336,6 +327,8 @@ class Mage_Weee_Model_Total_Quote_Weee extends Mage_Tax_Model_Sales_Total_Quote_
      *
      * @param Mage_Sales_Model_Quote_Item_Abstract $item
      * @return $this
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     protected function _recalculateParent(Mage_Sales_Model_Quote_Item_Abstract $item)
     {
@@ -369,6 +362,8 @@ class Mage_Weee_Model_Total_Quote_Weee extends Mage_Tax_Model_Sales_Total_Quote_
      *
      * @param   Mage_Sales_Model_Quote_Address $address
      * @return  $this
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function fetch(Mage_Sales_Model_Quote_Address $address)
     {
@@ -382,6 +377,8 @@ class Mage_Weee_Model_Total_Quote_Weee extends Mage_Tax_Model_Sales_Total_Quote_
      * @param   array $config
      * @param   Mage_Core_Model_Store $store
      * @return  array
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function processConfigArray($config, $store)
     {
@@ -396,6 +393,9 @@ class Mage_Weee_Model_Total_Quote_Weee extends Mage_Tax_Model_Sales_Total_Quote_
      * @param   Mage_Sales_Model_Quote_Item_Abstract $item
      * @param   bool $updateParent
      * @return  $this
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
+     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
      */
     protected function _processItem(Mage_Sales_Model_Quote_Address $address, $item, $updateParent = false)
     {
@@ -438,9 +438,6 @@ class Mage_Weee_Model_Total_Quote_Weee extends Mage_Tax_Model_Sales_Total_Quote_
              * Apply discount to fixed tax
              */
             if ($item->getDiscountPercent() && $this->_helper->isDiscounted($store)) {
-                $valueDiscount = $value / 100 * $item->getDiscountPercent();
-                $baseValueDiscount = $baseValue / 100 * $item->getDiscountPercent();
-
                 $rowValueDiscount = $rowValue / 100 * $item->getDiscountPercent();
                 $baseRowValueDiscount = $baseRowValue / 100 * $item->getDiscountPercent();
 

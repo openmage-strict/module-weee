@@ -91,6 +91,8 @@ class Mage_Weee_Model_Tax extends Mage_Core_Model_Abstract
      * @param bool $calculateTax
      * @param bool $ignoreDiscount
      * @return float
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function getWeeeAmount(
         $product,
@@ -120,6 +122,8 @@ class Mage_Weee_Model_Tax extends Mage_Core_Model_Abstract
      *
      * @param bool $forceEnabled
      * @return array
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function getWeeeAttributeCodes($forceEnabled = false)
     {
@@ -131,6 +135,8 @@ class Mage_Weee_Model_Tax extends Mage_Core_Model_Abstract
      *
      * @param bool $forceEnabled
      * @return array
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function getWeeeTaxAttributeCodes($forceEnabled = false)
     {
@@ -154,6 +160,11 @@ class Mage_Weee_Model_Tax extends Mage_Core_Model_Abstract
      * @param bool $calculateTax
      * @param bool $ignoreDiscount
      * @return array
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     * @SuppressWarnings(PHPMD.NPathComplexity)
      */
     public function getProductWeeeAttributes(
         $product,
