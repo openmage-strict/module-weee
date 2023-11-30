@@ -117,18 +117,17 @@ class Mage_Weee_Block_Renderer_Weee_Tax extends Mage_Adminhtml_Block_Widget impl
     /**
      * Sorts Weee Taxes
      *
-     * @param array $a
-     * @param array $b
-     *
+     * @param array $arrayA
+     * @param array $arrayB
      * @return int
      */
-    protected function _sortWeeeTaxes($a, $b)
+    protected function _sortWeeeTaxes($arrayA, $arrayB)
     {
-        if ($a['website_id'] != $b['website_id']) {
-            return $a['website_id'] < $b['website_id'] ? -1 : 1;
+        if ($arrayA['website_id'] != $arrayB['website_id']) {
+            return $arrayA['website_id'] < $arrayB['website_id'] ? -1 : 1;
         }
-        if ($a['country'] != $b['country']) {
-            return $a['country'] < $b['country'] ? -1 : 1;
+        if ($arrayA['country'] != $arrayB['country']) {
+            return $arrayA['country'] < $arrayB['country'] ? -1 : 1;
         }
         return 0;
     }

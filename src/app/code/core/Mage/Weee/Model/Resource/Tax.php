@@ -74,6 +74,9 @@ class Mage_Weee_Model_Resource_Tax extends Mage_Core_Model_Resource_Db_Abstract
      *
      * @param mixed $productCondition
      * @return $this
+     *
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @SuppressWarnings(PHPMD.NPathComplexity)
      */
     protected function _updateDiscountPercents($productCondition = null)
     {

@@ -16,6 +16,8 @@
 /**
  * @category   Mage
  * @package    Mage_Weee
+ *
+ * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
  */
 class Mage_Weee_Helper_Data extends Mage_Core_Helper_Abstract
 {
@@ -157,6 +159,8 @@ class Mage_Weee_Helper_Data extends Mage_Core_Helper_Abstract
      * @param   mixed $website
      * @param   bool $calculateTaxes
      * @return  float
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function getAmount($product, $shipping = null, $billing = null, $website = null, $calculateTaxes = false)
     {
@@ -170,11 +174,13 @@ class Mage_Weee_Helper_Data extends Mage_Core_Helper_Abstract
     /**
      * Returns diaplay type for price accordingly to current zone
      *
-     * @param Mage_Catalog_Model_Product $product
+     * @param Mage_Catalog_Model_Product $product unused
      * @param array|null                 $compareTo
      * @param string                     $zone
      * @param Mage_Core_Model_Store      $store
      * @return bool|int
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function typeOfDisplay($product, $compareTo = null, $zone = null, $store = null)
     {
@@ -223,6 +229,8 @@ class Mage_Weee_Helper_Data extends Mage_Core_Helper_Abstract
      * @param Mage_Core_Model_Website    $website
      * @param bool                       $calculateTaxes
      * @return array
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function getProductWeeeAttributes(
         $product,
@@ -303,6 +311,8 @@ class Mage_Weee_Helper_Data extends Mage_Core_Helper_Abstract
      * @param null|Mage_Core_Model_Website $website
      * @param mixed $calculateTaxes
      * @return array
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function getProductWeeeAttributesForRenderer(
         $product,
@@ -392,8 +402,10 @@ class Mage_Weee_Helper_Data extends Mage_Core_Helper_Abstract
      *
      * @param Mage_Catalog_Model_Product $product
      * @param array                      $tierPrices
-     * @param bool                    $includeIndex
+     * @param bool                       $includeIndex
      * @return $this
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function processTierPrices($product, &$tierPrices, $includeIndex = true)
     {
